@@ -1,0 +1,2108 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "<Replace key=\"PrimaryLocation.file\" /> の中のフォームは、行 <Replace key=\"PrimaryLocation.line\" /> でオートコンプリート機能を使用しています。この機能は、一部のブラウザが履歴内の重要な情報を保持できるようにするものです。\r\nフォームのオートコンプリート機能により、一部のブラウザは履歴内の重要な情報を保持できるようにします。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 57
+                },
+                "region": {
+                  "startLine": 12,
+                  "snippet": {
+                    "text": "        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 9,
+                  "endLine": 15,
+                  "snippet": {
+                    "text": "    </div>\n    <div class=\"form-group\">\n        <label for=\"password\">Password</label>\n        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\n        <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\n            <div *ngIf=\"f.password.errors.required\">Password is required</div>\n        </div>\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 57
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "snippet": {
+                              "text": "        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 9,
+                            "endLine": 15,
+                            "snippet": {
+                              "text": "    </div>\n    <div class=\"form-group\">\n        <label for=\"password\">Password</label>\n        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\n        <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\n            <div *ngIf=\"f.password.errors.required\">Password is required</div>\n        </div>\n"
+                            }
+                          }
+                        }
+                      },
+                      "kinds": [
+                        "unknown"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 57
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 9
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "3.0",
+            "Confidence": "5.0"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "message": {
+            "text": "承認していない要求を攻撃者が実行できないように、<Replace key=\"PrimaryLocation.file\" /> の <Replace key=\"PrimaryLocation.line\" /> 行にあるフォームの post には、ユーザー指定のシークレットを追加する必要があります。\r\n承認していない要求を攻撃者が実行できないように、フォームの post には、ユーザー指定のシークレットを追加する必要があります。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 40
+                },
+                "region": {
+                  "startLine": 3,
+                  "endLine": 34,
+                  "snippet": {
+                    "text": "  <form action=\"\" id=\"register-form\">\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"username\">User name:</label>\r\n      <input required=\"true\" type=\"text\" class=\"form-control\" \r\n      id=\"email\" placeholder=\"Enter user name\" [(ngModel)]=\"user.name\" name=\"name\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"password\">Password:</label>\r\n      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"emailAddress\">Mail address:</label>\r\n      <input type=\"text\" class=\"form-control\" \r\n      [(ngModel)]=\"user.emailAddress\"\r\n      id=\"emailAddress\" placeholder=\"Enter mail address\" name=\"emailAddress\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"motto\">Motto:</label>\r\n      <input type=\"text\" class=\"form-control\" \r\n      [(ngModel)]=\"user.motto\"\r\n      id=\"motto\" placeholder=\"Enter your motto\" name=\"motto\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"webPageUrl\">Your webpage:</label>\r\n      <input type=\"text\" class=\"form-control\" \r\n      [(ngModel)]=\"user.webPageUrl\"\r\n      id=\"webPageUrl\" placeholder=\"Enter the address of your webpage\" name=\"webPageUrl\"/>\r\n    </div>\r\n    <button type=\"submit\" class=\"btn btn-primary\" (click)=\"register()\">Register</button>\r\n  </form>"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 1,
+                  "endLine": 35,
+                  "snippet": {
+                    "text": "<div>\n  <h1>Register</h1>\n  <form action=\"\" id=\"register-form\">\n    <div class=\"form-group\">\n      <label htmlFor=\"username\">User name:</label>\n      <input required=\"true\" type=\"text\" class=\"form-control\" \n      id=\"email\" placeholder=\"Enter user name\" [(ngModel)]=\"user.name\" name=\"name\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n      <input type=\"text\" class=\"form-control\" \n      [(ngModel)]=\"user.emailAddress\"\n      id=\"emailAddress\" placeholder=\"Enter mail address\" name=\"emailAddress\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"motto\">Motto:</label>\n      <input type=\"text\" class=\"form-control\" \n      [(ngModel)]=\"user.motto\"\n      id=\"motto\" placeholder=\"Enter your motto\" name=\"motto\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"webPageUrl\">Your webpage:</label>\n      <input type=\"text\" class=\"form-control\" \n      [(ngModel)]=\"user.webPageUrl\"\n      id=\"webPageUrl\" placeholder=\"Enter the address of your webpage\" name=\"webPageUrl\"/>\n    </div>\n    <button type=\"submit\" class=\"btn btn-primary\" (click)=\"register()\">Register</button>\n  </form>\n</div>\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 40
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "endLine": 34,
+                            "snippet": {
+                              "text": "  <form action=\"\" id=\"register-form\">\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"username\">User name:</label>\r\n      <input required=\"true\" type=\"text\" class=\"form-control\" \r\n      id=\"email\" placeholder=\"Enter user name\" [(ngModel)]=\"user.name\" name=\"name\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"password\">Password:</label>\r\n      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"emailAddress\">Mail address:</label>\r\n      <input type=\"text\" class=\"form-control\" \r\n      [(ngModel)]=\"user.emailAddress\"\r\n      id=\"emailAddress\" placeholder=\"Enter mail address\" name=\"emailAddress\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"motto\">Motto:</label>\r\n      <input type=\"text\" class=\"form-control\" \r\n      [(ngModel)]=\"user.motto\"\r\n      id=\"motto\" placeholder=\"Enter your motto\" name=\"motto\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label htmlFor=\"webPageUrl\">Your webpage:</label>\r\n      <input type=\"text\" class=\"form-control\" \r\n      [(ngModel)]=\"user.webPageUrl\"\r\n      id=\"webPageUrl\" placeholder=\"Enter the address of your webpage\" name=\"webPageUrl\"/>\r\n    </div>\r\n    <button type=\"submit\" class=\"btn btn-primary\" (click)=\"register()\">Register</button>\r\n  </form>"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 1,
+                            "endLine": 35,
+                            "snippet": {
+                              "text": "<div>\n  <h1>Register</h1>\n  <form action=\"\" id=\"register-form\">\n    <div class=\"form-group\">\n      <label htmlFor=\"username\">User name:</label>\n      <input required=\"true\" type=\"text\" class=\"form-control\" \n      id=\"email\" placeholder=\"Enter user name\" [(ngModel)]=\"user.name\" name=\"name\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n      <input type=\"text\" class=\"form-control\" \n      [(ngModel)]=\"user.emailAddress\"\n      id=\"emailAddress\" placeholder=\"Enter mail address\" name=\"emailAddress\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"motto\">Motto:</label>\n      <input type=\"text\" class=\"form-control\" \n      [(ngModel)]=\"user.motto\"\n      id=\"motto\" placeholder=\"Enter your motto\" name=\"motto\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"webPageUrl\">Your webpage:</label>\n      <input type=\"text\" class=\"form-control\" \n      [(ngModel)]=\"user.webPageUrl\"\n      id=\"webPageUrl\" placeholder=\"Enter the address of your webpage\" name=\"webPageUrl\"/>\n    </div>\n    <button type=\"submit\" class=\"btn btn-primary\" (click)=\"register()\">Register</button>\n  </form>\n</div>\n"
+                            }
+                          }
+                        }
+                      },
+                      "kinds": [
+                        "unknown"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 40
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 3,
+                  "endLine": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "2.0",
+            "Confidence": "5.0"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "<Replace key=\"PrimaryLocation.file\" /> の関数 <Replace key=\"EnclosingFunction.name\" /> は、行 <Replace key=\"PrimaryLocation.line\" /> で <Replace key=\"PrimaryCall.name\" /> をコールすることで、システムデータやデバッグ情報を開示する場合があります。<Replace key=\"PrimaryCall.name\" /> によって開示された情報をもとに、攻撃者が攻撃を計画する可能性があります。\r\nシステムデータやデバッグ情報の開示は、システムについて攻撃者に教えることになり、攻撃の計画が立てやすくなります。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 61
+                },
+                "region": {
+                  "startLine": 12,
+                  "snippet": {
+                    "text": "  .catch(err => console.error(err));"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 9,
+                  "endLine": 12,
+                  "snippet": {
+                    "text": "}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "index": 0
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 61
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "snippet": {
+                              "text": "  .catch(err => console.error(err));"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 9,
+                            "endLine": 12,
+                            "snippet": {
+                              "text": "}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
+                            }
+                          }
+                        },
+                        "message": {
+                          "text": "error(0)"
+                        }
+                      },
+                      "kinds": [
+                        "call",
+                        "function"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 61
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "3.0",
+            "Confidence": "4.8"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "message": {
+            "text": "承認していない要求を攻撃者が実行できないように、<Replace key=\"PrimaryLocation.file\" /> の <Replace key=\"PrimaryLocation.line\" /> 行にあるフォームの post には、ユーザー指定のシークレットを追加する必要があります。\r\n承認していない要求を攻撃者が実行できないように、フォームの post には、ユーザー指定のシークレットを追加する必要があります。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 57
+                },
+                "region": {
+                  "startLine": 2,
+                  "endLine": 22,
+                  "snippet": {
+                    "text": "<form [formGroup]=\"loginForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"form-group\">\r\n        <label for=\"username\">Username</label>\r\n        <input type=\"text\" formControlName=\"username\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.username.errors }\" />\r\n        <div *ngIf=\"submitted && f.username.errors\" class=\"invalid-feedback\">\r\n            <div *ngIf=\"f.username.errors.required\">Username is required</div>\r\n        </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"password\">Password</label>\r\n        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\r\n        <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\r\n            <div *ngIf=\"f.password.errors.required\">Password is required</div>\r\n        </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <button [disabled]=\"loading\" class=\"btn btn-primary\">Login</button>\r\n        <img *ngIf=\"loading\" class=\"pl-3\" src=\"data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==\" />\r\n        <a routerLink=\"/register\" class=\"btn btn-link\">Register</a>\r\n    </div>\r\n</form>"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 1,
+                  "endLine": 22,
+                  "snippet": {
+                    "text": "<h2>Login</h2>\n<form [formGroup]=\"loginForm\" (ngSubmit)=\"onSubmit()\">\n    <div class=\"form-group\">\n        <label for=\"username\">Username</label>\n        <input type=\"text\" formControlName=\"username\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.username.errors }\" />\n        <div *ngIf=\"submitted && f.username.errors\" class=\"invalid-feedback\">\n            <div *ngIf=\"f.username.errors.required\">Username is required</div>\n        </div>\n    </div>\n    <div class=\"form-group\">\n        <label for=\"password\">Password</label>\n        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\n        <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\n            <div *ngIf=\"f.password.errors.required\">Password is required</div>\n        </div>\n    </div>\n    <div class=\"form-group\">\n        <button [disabled]=\"loading\" class=\"btn btn-primary\">Login</button>\n        <img *ngIf=\"loading\" class=\"pl-3\" src=\"data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==\" />\n        <a routerLink=\"/register\" class=\"btn btn-link\">Register</a>\n    </div>\n</form>\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 57
+                          },
+                          "region": {
+                            "startLine": 2,
+                            "endLine": 22,
+                            "snippet": {
+                              "text": "<form [formGroup]=\"loginForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"form-group\">\r\n        <label for=\"username\">Username</label>\r\n        <input type=\"text\" formControlName=\"username\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.username.errors }\" />\r\n        <div *ngIf=\"submitted && f.username.errors\" class=\"invalid-feedback\">\r\n            <div *ngIf=\"f.username.errors.required\">Username is required</div>\r\n        </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"password\">Password</label>\r\n        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\r\n        <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\r\n            <div *ngIf=\"f.password.errors.required\">Password is required</div>\r\n        </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <button [disabled]=\"loading\" class=\"btn btn-primary\">Login</button>\r\n        <img *ngIf=\"loading\" class=\"pl-3\" src=\"data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==\" />\r\n        <a routerLink=\"/register\" class=\"btn btn-link\">Register</a>\r\n    </div>\r\n</form>"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 1,
+                            "endLine": 22,
+                            "snippet": {
+                              "text": "<h2>Login</h2>\n<form [formGroup]=\"loginForm\" (ngSubmit)=\"onSubmit()\">\n    <div class=\"form-group\">\n        <label for=\"username\">Username</label>\n        <input type=\"text\" formControlName=\"username\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.username.errors }\" />\n        <div *ngIf=\"submitted && f.username.errors\" class=\"invalid-feedback\">\n            <div *ngIf=\"f.username.errors.required\">Username is required</div>\n        </div>\n    </div>\n    <div class=\"form-group\">\n        <label for=\"password\">Password</label>\n        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\n        <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\n            <div *ngIf=\"f.password.errors.required\">Password is required</div>\n        </div>\n    </div>\n    <div class=\"form-group\">\n        <button [disabled]=\"loading\" class=\"btn btn-primary\">Login</button>\n        <img *ngIf=\"loading\" class=\"pl-3\" src=\"data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==\" />\n        <a routerLink=\"/register\" class=\"btn btn-link\">Register</a>\n    </div>\n</form>\n"
+                            }
+                          }
+                        }
+                      },
+                      "kinds": [
+                        "unknown"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 57
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "2.0",
+            "Confidence": "5.0"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "message": {
+            "text": "承認していない要求を攻撃者が実行できないように、<Replace key=\"PrimaryLocation.file\" /> の <Replace key=\"PrimaryLocation.line\" /> 行にあるフォームの post には、ユーザー指定のシークレットを追加する必要があります。\r\n承認していない要求を攻撃者が実行できないように、フォームの post には、ユーザー指定のシークレットを追加する必要があります。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 3,
+                  "endLine": 30,
+                  "snippet": {
+                    "text": "    <form action=\"\" id=\"newmovie-form\">\r\n      <div class=\"form-group\">\r\n        <label htmlFor=\"title\">Title:</label>\r\n        <input required=\"true\" type=\"text\" class=\"form-control\" \r\n        id=\"title\" placeholder=\"Enter movie title\" [(ngModel)]=\"movie.title\" name=\"title\"/>\r\n      </div>\r\n\r\n      <div class=\"form-group\">\r\n          <label htmlFor=\"description\">Description:</label>\r\n          <textarea class=\"form-control\" required=\"true\" placeholder=\"Add a short description of the movie\"\r\n          id=\"description\" [(ngModel)]=\"movie.description\" rows=\"7\" name=\"description\"></textarea>\r\n        </div>\r\n\r\n      <div class=\"form-group\">\r\n          <label htmlFor=\"genre\">Genre:</label>\r\n          <input required=\"true\" type=\"text\" class=\"form-control\" name=\"genre\"\r\n          id=\"genre\" placeholder=\"Enter movie's genre\" [(ngModel)]=\"movie.genre\"/>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label htmlFor=\"imageUrl\">Image url:</label>\r\n            <input  type=\"text\" class=\"form-control\" name=\"imageUrl\"\r\n            id=\"imageUrl\" placeholder=\"Type a valid image url!\" [(ngModel)]=\"movie.imageUrl\"/>\r\n          </div>\r\n\r\n     \r\n      <button type=\"submit\" class=\"btn btn-primary\" (click)=\"addMovie()\">Add</button>\r\n    </form>"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 1,
+                  "endLine": 31,
+                  "snippet": {
+                    "text": "<div>\n    <h1>Add movie</h1>\n    <form action=\"\" id=\"newmovie-form\">\n      <div class=\"form-group\">\n        <label htmlFor=\"title\">Title:</label>\n        <input required=\"true\" type=\"text\" class=\"form-control\" \n        id=\"title\" placeholder=\"Enter movie title\" [(ngModel)]=\"movie.title\" name=\"title\"/>\n      </div>\n\n      <div class=\"form-group\">\n          <label htmlFor=\"description\">Description:</label>\n          <textarea class=\"form-control\" required=\"true\" placeholder=\"Add a short description of the movie\"\n          id=\"description\" [(ngModel)]=\"movie.description\" rows=\"7\" name=\"description\"></textarea>\n        </div>\n\n      <div class=\"form-group\">\n          <label htmlFor=\"genre\">Genre:</label>\n          <input required=\"true\" type=\"text\" class=\"form-control\" name=\"genre\"\n          id=\"genre\" placeholder=\"Enter movie's genre\" [(ngModel)]=\"movie.genre\"/>\n        </div>\n\n        <div class=\"form-group\">\n            <label htmlFor=\"imageUrl\">Image url:</label>\n            <input  type=\"text\" class=\"form-control\" name=\"imageUrl\"\n            id=\"imageUrl\" placeholder=\"Type a valid image url!\" [(ngModel)]=\"movie.imageUrl\"/>\n          </div>\n\n     \n      <button type=\"submit\" class=\"btn btn-primary\" (click)=\"addMovie()\">Add</button>\n    </form>\n  </div>\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 2
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "endLine": 30,
+                            "snippet": {
+                              "text": "    <form action=\"\" id=\"newmovie-form\">\r\n      <div class=\"form-group\">\r\n        <label htmlFor=\"title\">Title:</label>\r\n        <input required=\"true\" type=\"text\" class=\"form-control\" \r\n        id=\"title\" placeholder=\"Enter movie title\" [(ngModel)]=\"movie.title\" name=\"title\"/>\r\n      </div>\r\n\r\n      <div class=\"form-group\">\r\n          <label htmlFor=\"description\">Description:</label>\r\n          <textarea class=\"form-control\" required=\"true\" placeholder=\"Add a short description of the movie\"\r\n          id=\"description\" [(ngModel)]=\"movie.description\" rows=\"7\" name=\"description\"></textarea>\r\n        </div>\r\n\r\n      <div class=\"form-group\">\r\n          <label htmlFor=\"genre\">Genre:</label>\r\n          <input required=\"true\" type=\"text\" class=\"form-control\" name=\"genre\"\r\n          id=\"genre\" placeholder=\"Enter movie's genre\" [(ngModel)]=\"movie.genre\"/>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label htmlFor=\"imageUrl\">Image url:</label>\r\n            <input  type=\"text\" class=\"form-control\" name=\"imageUrl\"\r\n            id=\"imageUrl\" placeholder=\"Type a valid image url!\" [(ngModel)]=\"movie.imageUrl\"/>\r\n          </div>\r\n\r\n     \r\n      <button type=\"submit\" class=\"btn btn-primary\" (click)=\"addMovie()\">Add</button>\r\n    </form>"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 1,
+                            "endLine": 31,
+                            "snippet": {
+                              "text": "<div>\n    <h1>Add movie</h1>\n    <form action=\"\" id=\"newmovie-form\">\n      <div class=\"form-group\">\n        <label htmlFor=\"title\">Title:</label>\n        <input required=\"true\" type=\"text\" class=\"form-control\" \n        id=\"title\" placeholder=\"Enter movie title\" [(ngModel)]=\"movie.title\" name=\"title\"/>\n      </div>\n\n      <div class=\"form-group\">\n          <label htmlFor=\"description\">Description:</label>\n          <textarea class=\"form-control\" required=\"true\" placeholder=\"Add a short description of the movie\"\n          id=\"description\" [(ngModel)]=\"movie.description\" rows=\"7\" name=\"description\"></textarea>\n        </div>\n\n      <div class=\"form-group\">\n          <label htmlFor=\"genre\">Genre:</label>\n          <input required=\"true\" type=\"text\" class=\"form-control\" name=\"genre\"\n          id=\"genre\" placeholder=\"Enter movie's genre\" [(ngModel)]=\"movie.genre\"/>\n        </div>\n\n        <div class=\"form-group\">\n            <label htmlFor=\"imageUrl\">Image url:</label>\n            <input  type=\"text\" class=\"form-control\" name=\"imageUrl\"\n            id=\"imageUrl\" placeholder=\"Type a valid image url!\" [(ngModel)]=\"movie.imageUrl\"/>\n          </div>\n\n     \n      <button type=\"submit\" class=\"btn btn-primary\" (click)=\"addMovie()\">Add</button>\n    </form>\n  </div>\n"
+                            }
+                          }
+                        }
+                      },
+                      "kinds": [
+                        "unknown"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 5,
+                  "endLine": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "2.0",
+            "Confidence": "5.0"
+          }
+        },
+        {
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "<Replace key=\"PrimaryLocation.file\" /> の中のフォームは、行 <Replace key=\"PrimaryLocation.line\" /> でオートコンプリート機能を使用しています。この機能は、一部のブラウザが履歴内の重要な情報を保持できるようにするものです。\r\nフォームのオートコンプリート機能により、一部のブラウザは履歴内の重要な情報を保持できるようにします。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 40
+                },
+                "region": {
+                  "startLine": 11,
+                  "endLine": 13,
+                  "snippet": {
+                    "text": "      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 8,
+                  "endLine": 16,
+                  "snippet": {
+                    "text": "    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 40
+                          },
+                          "region": {
+                            "startLine": 11,
+                            "endLine": 13,
+                            "snippet": {
+                              "text": "      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 8,
+                            "endLine": 16,
+                            "snippet": {
+                              "text": "    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                            }
+                          }
+                        }
+                      },
+                      "kinds": [
+                        "unknown"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 40
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 7,
+                  "endLine": 13
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "3.0",
+            "Confidence": "5.0"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "<Replace key=\"PrimaryLocation.file\" /> のフォームは、行 <Replace key=\"PrimaryLocation.line\" /> で HTTP GET リクエストの一部としてパスワードを送信するため、パスワードが表示されたり、記録されたり、あるいはブラウザのキャッシュに格納されたりします。\r\nHTTP GET リクエストの一部としてパスワードを送信すると、パスワードが表示されたり、記録されたり、あるいはキャッシュに格納されたします。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 40
+                },
+                "region": {
+                  "startLine": 11,
+                  "endLine": 13,
+                  "snippet": {
+                    "text": "      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 8,
+                  "endLine": 16,
+                  "snippet": {
+                    "text": "    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 40
+                          },
+                          "region": {
+                            "startLine": 11,
+                            "endLine": 13,
+                            "snippet": {
+                              "text": "      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 8,
+                            "endLine": 16,
+                            "snippet": {
+                              "text": "    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                            }
+                          }
+                        }
+                      },
+                      "kinds": [
+                        "unknown"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 40
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 7,
+                  "endLine": 13
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "4.0",
+            "Confidence": "5.0"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "<Replace key=\"PrimaryLocation.file\" /> のフォームは、行 <Replace key=\"PrimaryLocation.line\" /> で HTTP GET リクエストの一部としてパスワードを送信するため、パスワードが表示されたり、記録されたり、あるいはブラウザのキャッシュに格納されたりします。\r\nHTTP GET リクエストの一部としてパスワードを送信すると、パスワードが表示されたり、記録されたり、あるいはキャッシュに格納されたします。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 57
+                },
+                "region": {
+                  "startLine": 12,
+                  "snippet": {
+                    "text": "        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 9,
+                  "endLine": 15,
+                  "snippet": {
+                    "text": "    </div>\n    <div class=\"form-group\">\n        <label for=\"password\">Password</label>\n        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\n        <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\n            <div *ngIf=\"f.password.errors.required\">Password is required</div>\n        </div>\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 57
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "snippet": {
+                              "text": "        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 9,
+                            "endLine": 15,
+                            "snippet": {
+                              "text": "    </div>\n    <div class=\"form-group\">\n        <label for=\"password\">Password</label>\n        <input type=\"password\" formControlName=\"password\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\n        <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\n            <div *ngIf=\"f.password.errors.required\">Password is required</div>\n        </div>\n"
+                            }
+                          }
+                        }
+                      },
+                      "kinds": [
+                        "unknown"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 57
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 9
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "4.0",
+            "Confidence": "5.0"
+          }
+        },
+        {
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "<Replace key=\"PrimaryLocation.file\" /> ファイルは、行 <Replace key=\"PrimaryLocation.line\" /> で機密情報を適切に扱っていないため、ユーザーのプライバシーが危険にさらされるだけでなく、多くの場合に法律違反となります。\r\n顧客パスワードや社会保障番号などの個人情報の取り扱いを誤ると、ユーザーのプライバシーが危険にさらされるだけでなく、多くの場合に法律違反となります。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 25,
+                  "snippet": {
+                    "text": "    console.log(this.user);"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 22,
+                  "endLine": 28,
+                  "snippet": {
+                    "text": "  }\n\n  register(): void {\n    console.log(this.user);\n    this.regservice.register(this.user)\n      .subscribe(\n        res => {\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "index": 1
+                    },
+                    {
+                      "index": 2
+                    },
+                    {
+                      "index": 3
+                    },
+                    {
+                      "index": 4
+                    },
+                    {
+                      "index": 6
+                    },
+                    {
+                      "index": 7
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 3
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "snippet": {
+                              "text": "    console.log(this.user);"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 22,
+                            "endLine": 28,
+                            "snippet": {
+                              "text": "  }\n\n  register(): void {\n    console.log(this.user);\n    this.regservice.register(this.user)\n      .subscribe(\n        res => {\n"
+                            }
+                          }
+                        },
+                        "message": {
+                          "text": "log(0)"
+                        }
+                      },
+                      "kinds": [
+                        "call",
+                        "function"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "3.0",
+            "Confidence": "4.8"
+          }
+        },
+        {
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "<Replace key=\"PrimaryLocation.file\" /> ファイルは、行 <Replace key=\"PrimaryLocation.line\" /> で機密情報を適切に扱っていないため、ユーザーのプライバシーが危険にさらされるだけでなく、多くの場合に法律違反となります。\r\n顧客パスワードや社会保障番号などの個人情報の取り扱いを誤ると、ユーザーのプライバシーが危険にさらされるだけでなく、多くの場合に法律違反となります。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 25,
+                  "snippet": {
+                    "text": "    console.log(this.user);"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 22,
+                  "endLine": 28,
+                  "snippet": {
+                    "text": "  }\n\n  register(): void {\n    console.log(this.user);\n    this.regservice.register(this.user)\n      .subscribe(\n        res => {\n"
+                  }
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "index": 8
+                    },
+                    {
+                      "index": 9
+                    },
+                    {
+                      "index": 4
+                    },
+                    {
+                      "index": 6
+                    },
+                    {
+                      "index": 7
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 3
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "snippet": {
+                              "text": "    console.log(this.user);"
+                            }
+                          },
+                          "contextRegion": {
+                            "startLine": 22,
+                            "endLine": 28,
+                            "snippet": {
+                              "text": "  }\n\n  register(): void {\n    console.log(this.user);\n    this.regservice.register(this.user)\n      .subscribe(\n        res => {\n"
+                            }
+                          }
+                        },
+                        "message": {
+                          "text": "log(0)"
+                        }
+                      },
+                      "kinds": [
+                        "call",
+                        "function"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "InstanceSeverity": "3.0",
+            "Confidence": "4.8"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "Micro Focus Fortify Static Code Analyzer",
+          "rules": [
+            {
+              "id": "7D91AD3F-8148-4E32-A221-F6CA8980795F0",
+              "guid": "7D91AD3F-8148-4E32-A221-F6CA8980795F0",
+              "shortDescription": {
+                "text": "<Replace key=\"PrimaryLocation.file\" /> の関数 <Replace key=\"EnclosingFunction.name\" /> は、行 <Replace key=\"PrimaryLocation.line\" /> で <Replace key=\"PrimaryCall.name\" /> をコールすることで、システムデータやデバッグ情報を開示する場合があります。<Replace key=\"PrimaryCall.name\" /> によって開示された情報をもとに、攻撃者が攻撃を計画する可能性があります。\r\nシステムデータやデバッグ情報の開示は、システムについて攻撃者に教えることになり、攻撃の計画が立てやすくなります。"
+              },
+              "fullDescription": {
+                "text": "内部的な情報漏えいは、システムデータやデバッグ情報がローカルのファイル、コンソール、または画面に印刷やロギングによって送られるとき発生します。\r\n\r\nこの場合、<Replace key=\"PrimaryCall.name\" link=\"PrimaryLocation\" />は <Replace key=\"PrimaryLocation.file\" /> の行 <Replace key=\"PrimaryLocation.line\" /> でコールされています。\r\n\r\n**例 1:** 以下のコードは例外を標準エラーストリームに書き込みます。\r\n\r\n`\nvar http = require('http');\n...\r\n\r\nhttp.request(options, function(res){\n  ...\n}).on('error', function(e){\n  console.log('There was a problem with the request: ' + e);\n});\n...\n`\r\n\r\nシステム構成により異なりますが、この情報は、コンソールへのダンプ、ログファイルへの書き込み、およびユーザーへの開示が可能です。場合によってはエラーメッセージから、システムがどのような攻撃に対して脆弱か攻撃者が正確に把握してしまいます。たとえば、あるデータベースのエラー メッセージから、アプリケーションが SQL Injection 攻撃に対して脆弱であることがわかる場合があります。また、他のエラー メッセージがシステムに関する間接的な手がかりを示すことがあります。`Example 1` では、漏洩情報に、オペレーティングシステムのタイプ、システムにインストールされているアプリケーション、およびプログラムの設定に対する管理者の警戒度についての情報が含まれています。"
+              },
+              "defaultConfiguration": {
+                "level": "note",
+                "properties": {
+                  "DefaultSeverity": "3.0"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "497",
+                    "toolComponent": {
+                      "name": "CWE",
+                      "guid": "25F72D7E-8A92-459D-AD67-64853F788765"
+                    }
+                  },
+                  "kinds": [
+                    "relevant"
+                  ]
+                }
+              ],
+              "properties": {
+                "Accuracy": "4.0",
+                "Impact": "1.0",
+                "Probability": "1.0",
+                "Kingdom": "Encapsulation",
+                "Type": "System Information Leak",
+                "Subtype": "Internal"
+              }
+            },
+            {
+              "id": "F6D9F544-4E31-498A-A71D-1ACC374A9AA8",
+              "guid": "F6D9F544-4E31-498A-A71D-1ACC374A9AA8",
+              "shortDescription": {
+                "text": "<Replace key=\"PrimaryLocation.file\" /> のフォームは、行 <Replace key=\"PrimaryLocation.line\" /> で HTTP GET リクエストの一部としてパスワードを送信するため、パスワードが表示されたり、記録されたり、あるいはブラウザのキャッシュに格納されたりします。\r\nHTTP GET リクエストの一部としてパスワードを送信すると、パスワードが表示されたり、記録されたり、あるいはキャッシュに格納されたします。"
+              },
+              "fullDescription": {
+                "text": "慣例により、HTTP GET リクエストに関連付けられているパラメーターは機密データとして取り扱われないため、そのパラメーターを Web サーバーが記録したり、プロキシがキャッシュしたりします。また、Web ブラウザはそのようなパラメーターを隠すための処理をしません。HTTP GET リクエストの一部としてパスワードや機密データを送信すると、送信されたデータは適切に扱われないだけでなく、攻撃者に漏洩する可能性が高くなります。\r\n\r\n**例 1:** 次の例では、HTTP GET リクエストを介して新しいユーザーパスワードが送信されています。\n`\n&lt;form method=\"get\"&gt;\n  Name of new user: &lt;input type=\"text\" name=\"username\"&gt;\n  Password for new user: &lt;input type=\"password\" name=\"user_passwd\"&gt;\n  &lt;input type=\"submit\" name=\"action\" value=\"Create User\"&gt;\n&lt;/form&gt;\n`\r\n\r\nまた、`method` 属性のデフォルト値が `GET` であるため、この属性を省略しても、結果は同じです。"
+              },
+              "defaultConfiguration": {
+                "level": "error",
+                "properties": {
+                  "DefaultSeverity": "4.0"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "359",
+                    "toolComponent": {
+                      "name": "CWE",
+                      "guid": "25F72D7E-8A92-459D-AD67-64853F788765"
+                    }
+                  },
+                  "kinds": [
+                    "relevant"
+                  ]
+                },
+                {
+                  "target": {
+                    "id": "311",
+                    "toolComponent": {
+                      "name": "CWE",
+                      "guid": "25F72D7E-8A92-459D-AD67-64853F788765"
+                    }
+                  },
+                  "kinds": [
+                    "relevant"
+                  ]
+                }
+              ],
+              "properties": {
+                "Accuracy": "4.0",
+                "Impact": "4.0",
+                "Probability": "4.0",
+                "Kingdom": "Security Features",
+                "Type": "Password Management",
+                "Subtype": "Insecure Submission"
+              }
+            },
+            {
+              "id": "78E0700E-56FE-45A2-A11B-6A560F730576",
+              "guid": "78E0700E-56FE-45A2-A11B-6A560F730576",
+              "shortDescription": {
+                "text": "承認していない要求を攻撃者が実行できないように、<Replace key=\"PrimaryLocation.file\" /> の <Replace key=\"PrimaryLocation.line\" /> 行にあるフォームの post には、ユーザー指定のシークレットを追加する必要があります。\r\n承認していない要求を攻撃者が実行できないように、フォームの post には、ユーザー指定のシークレットを追加する必要があります。"
+              },
+              "fullDescription": {
+                "text": "次の場合に、Cross-Site Request Forgery (CSRF) の脆弱性が発生します。\n1. Web アプリケーションがセッションの cookie を使用する。\r\n\r\n2. ユーザの承諾を得てリクエストが作成されているかをどうかを検証せずに、この Web アプリケーションは HTTP リクエストを処理する。\r\n\r\nこの場合、アプリケーションは <Replace key=\"PrimaryLocation.file\" />の <Replace key=\"PrimaryLocation.line\" /> にあるフォームの post から HTTP リクエストを生成します。\r\n\r\nナンス (ワンタイムパスワード) は、反射攻撃を防止するためにメッセージと共に送信される暗号的な乱数値です。生成元を証明するナンス (ワンタイム パスワード) がリクエストに含まれていない場合、このリクエストを処理するコードは CSRF 攻撃に対して脆弱になる可能性があります （アプリケーションの状態が変更される場合は脆弱になりません）。つまり、セッション cookie を使用する Web アプリケーションでは、攻撃者によってユーザが偽のリクエストを送信するように仕向けられることないように、特殊な予防措置を講じる必要があります。管理者が次のフォームを送信して新しいアカウントを作成できる Web アプリケーションを例としてみましょう。\r\n\r\n`\n&lt;form method=\"POST\" action=\"/new_user\" &gt;\n  Name of new user: &lt;input type=\"text\" name=\"username\"&gt;\n  Password for new user: &lt;input type=\"password\" name=\"user_passwd\"&gt;\n    &lt;input type=\"submit\" name=\"action\" value=\"Create User\"&gt;\n&lt;/form&gt;\n`\r\n\r\n攻撃者は次のフォームを使用した Web サイトを準備する可能性があります。\r\n\r\n`\n&lt;form method=\"POST\" action=\"http://www.example.com/new_user\"&gt;\n  &lt;input type=\"hidden\" name=\"username\" value=\"hacker\"&gt;\n  &lt;input type=\"hidden\" name=\"user_passwd\" value=\"hacked\"&gt;\n&lt;/form&gt;\n&lt;script&gt;\n  document.usr_form.submit();\n&lt;/script&gt;\n`\r\n\r\n`example.com` の管理者が、サイトでセッションを行っているときに、悪意あるページにアクセスすると、攻撃者にアカウントを作成してしまいますが、本人はそのことに気づきません。これが CSRF 攻撃です。アプリケーションには、リクエストの生成元を検証する方法がないために、この攻撃が可能となっています。リクエストはユーザによって選択された正当なアクションにも、攻撃者が準備した不正なアクションにもなりえます。攻撃者は偽のリクエストを生成する Web ページを見ることができません。そのため、この攻撃方法は、アプリケーションの状態を変更するリクエストにのみ有効です。\r\n\r\ncookie ではなく URL でセッション ID を渡すアプリケーションには CSRF の問題は存在しません。これは、攻撃者にとってセッション ID にアクセスすることやセッション ID を偽のリクエストの一部に追加することは不可能であるためです。\r\n\r\n2007 年の OWASP トップ 10 リストで CSRF は第 5 位でした。"
+              },
+              "defaultConfiguration": {
+                "properties": {
+                  "DefaultSeverity": "2.0"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "352",
+                    "toolComponent": {
+                      "name": "CWE",
+                      "guid": "25F72D7E-8A92-459D-AD67-64853F788765"
+                    }
+                  },
+                  "kinds": [
+                    "relevant"
+                  ]
+                }
+              ],
+              "properties": {
+                "Accuracy": "1.0",
+                "Impact": "2.0",
+                "Probability": "2.0",
+                "Kingdom": "Encapsulation",
+                "Type": "Cross-Site Request Forgery"
+              }
+            },
+            {
+              "id": "01A4EE88-B0AD-4BB1-8AE1-BE46EC8543230",
+              "guid": "01A4EE88-B0AD-4BB1-8AE1-BE46EC8543230",
+              "shortDescription": {
+                "text": "<Replace key=\"PrimaryLocation.file\" /> ファイルは、行 <Replace key=\"PrimaryLocation.line\" /> で機密情報を適切に扱っていないため、ユーザーのプライバシーが危険にさらされるだけでなく、多くの場合に法律違反となります。\r\n顧客パスワードや社会保障番号などの個人情報の取り扱いを誤ると、ユーザーのプライバシーが危険にさらされるだけでなく、多くの場合に法律違反となります。"
+              },
+              "fullDescription": {
+                "text": "次の場合に Privacy Violation が発生します。\r\n\r\n1. ユーザーの個人情報がプログラムに持ち込まれる場合。\r\n\r\nこの場合、データは <Replace key=\"SourceLocation.file\" /> の行 <Replace key=\"SourceLocation.line\" /> にある <Replace key=\"SourceFunction\" link=\"SourceLocation\" /> に由来します。\r\n\r\n2. コンソール、File System、ネットワークなどの外部の場所にデータが書き込まれる場合。\r\n\r\nこの場合、データは <Replace key=\"SinkLocation.file\" /> の行 <Replace key=\"SinkLocation.line\" /> にある <Replace key=\"SinkFunction\" link=\"SinkLocation\" /> に渡されます。\r\n\r\n**例:** 次のコードは、ユーザーに平文のパスワードをローカルストレージに保存しています。\r\n\r\n`\n  localStorage.setItem('password', password);\n`\r\n\r\n多くの開発者がローカルストレージをデータの安全な格納先として扱いがちですが、特にプライバシーに関わる場合は盲目的に信頼しないでください。\r\n\r\n個人データがプログラムに持ち込まれる方法はさまざまです。\r\n\r\n- パスワードや個人情報の形でユーザーが直接入力する。\r\n\r\n- アプリケーションにより、データベースなどのデータストアからアクセスされる。\r\n\r\n- パートナなどの第三者から間接的に持ち込まれる。\r\n\r\n個人情報と明記されていないデータも、別のコンテキストでは個人情報としての意味を持つことがあります。たとえば、学籍番号は、学生の個人情報に結びつくような明示的で公開されたマッピングがないので、通常、個人情報とは見なされません。しかし、学校が学生の社会保障番号に基づいて学籍番号を生成する場合は、学籍番号は個人情報と見なすべきです。\r\n\r\n多くの場合、セキュリティとプライバシーの問題は互いに競い合っているかのようです。セキュリティの見地からは、異常な活動があった場合に後で識別できるように、重要な操作はすべて記録するべきです。ただし、個人データが関係する場合、それによりリスクが生じる可能性があります。\r\n\r\n個人データの安全でない取り扱いにもさまざまな形態がありますが、一般的なリスクの原因は不適切な信頼にあります。多くの場合、プログラマはプログラムが実行される操作環境を信頼するので、個人情報を File System やレジストリなどのローカルに制御されているリソースに格納することも適切だと考えます。ただし、一部のリソースへのアクセスが制限されている場合も、実際にアクセス権を持っている個人なら信頼できるとは限りません。たとえば、2004 年には、AOL のある不心得な従業員が、約 9,200 万人の個人顧客の電子メール アドレスを、海外のギャンブル Web サイトのマーケティングをしているスパマーに販売しました [1]。\r\n\r\nこうした悪用が注目を集めたため、個人データの収集と管理に関する規制は厳しさを増しています。会社などの所在地や業種、処理する個人データの性質によって異なりますが、以下に挙げる連邦や州の規制の遵守を求められる場合があります。\r\n\r\n- Safe Harbor Privacy Framework [3]\r\n\r\n- Gramm-Leach Bliley Act (GLBA) [4]\r\n\r\n- Health Insurance Portability and Accountability Act (HIPAA) [5]\r\n\r\n- California SB-1386 [6]\r\n\r\nこれらの規制にも関わらず、Privacy Violation はますます高い頻度で発生し続けています。"
+              },
+              "defaultConfiguration": {
+                "level": "error",
+                "properties": {
+                  "DefaultSeverity": "3.0"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "359",
+                    "toolComponent": {
+                      "name": "CWE",
+                      "guid": "25F72D7E-8A92-459D-AD67-64853F788765"
+                    }
+                  },
+                  "kinds": [
+                    "relevant"
+                  ]
+                }
+              ],
+              "properties": {
+                "Accuracy": "4.0",
+                "Impact": "4.0",
+                "Probability": "3.5",
+                "Kingdom": "Security Features",
+                "Type": "Privacy Violation"
+              }
+            },
+            {
+              "id": "2FC7D1FF-11E4-468E-B7AB-F127828F4016",
+              "guid": "2FC7D1FF-11E4-468E-B7AB-F127828F4016",
+              "shortDescription": {
+                "text": "<Replace key=\"PrimaryLocation.file\" /> の中のフォームは、行 <Replace key=\"PrimaryLocation.line\" /> でオートコンプリート機能を使用しています。この機能は、一部のブラウザが履歴内の重要な情報を保持できるようにするものです。\r\nフォームのオートコンプリート機能により、一部のブラウザは履歴内の重要な情報を保持できるようにします。"
+              },
+              "fullDescription": {
+                "text": "オートコンプリート機能が有効になっていると、一部のブラウザではユーザー入力がセッション間で保持されます。そのため、最初のユーザーの後にコンピュータを使用したユーザーが、それまでに送信された情報を表示できる可能性があります。"
+              },
+              "defaultConfiguration": {
+                "level": "error",
+                "properties": {
+                  "DefaultSeverity": "3.0"
+                }
+              },
+              "relationships": [
+                {
+                  "target": {
+                    "id": "525",
+                    "toolComponent": {
+                      "name": "CWE",
+                      "guid": "25F72D7E-8A92-459D-AD67-64853F788765"
+                    }
+                  },
+                  "kinds": [
+                    "relevant"
+                  ]
+                }
+              ],
+              "properties": {
+                "Accuracy": "4.0",
+                "Impact": "4.0",
+                "Probability": "2.0",
+                "Kingdom": "Security Features",
+                "Type": "Privacy Violation",
+                "Subtype": "Autocomplete"
+              }
+            },
+            {
+              "id": "4B50B83A-A24F-49EA-BD59-C2EA5D60F63F0",
+              "guid": "4B50B83A-A24F-49EA-BD59-C2EA5D60F63F0"
+            },
+            {
+              "id": "599C5EB8-6499-415B-9974-988BA8C5B0330",
+              "guid": "599C5EB8-6499-415B-9974-988BA8C5B0330"
+            },
+            {
+              "id": "767B194F-9991-451F-A81D-E5CD0BB3BB100",
+              "guid": "767B194F-9991-451F-A81D-E5CD0BB3BB100"
+            }
+          ],
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0,
+              "guid": "25F72D7E-8A92-459D-AD67-64853F788765"
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "[REMOVED]insourceanalyzer.exe -b leaky-angular -Dcom.fortify.sca.Phase0HigherOrder.Languages=javascript,typescript -scan -f Fortifyleaky-angular.fpr",
+          "startTimeUtc": "2021-10-14T17:22:35.000Z",
+          "executionSuccessful": true,
+          "machine": "ACPC175378",
+          "account": "YA31112",
+          "properties": {
+            "Platform": "Windows 10"
+          }
+        }
+      ],
+      "originalUriBaseIds": {
+        "SRCROOT": {
+          "uri": "file:///C:/Source/leaky-angular/"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/app/profile/profile.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 26,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "e2e/tsconfig.e2e.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 213,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/newmovie/newmovie.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1272,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/registration/registration.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1018,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/registration/registration.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 670,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/home/home.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 614,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/alert/alert.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 649,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/profile/profile.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 635,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "angular.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 4165,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/environments/environment.prod.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 87,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/environments/environment.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 778,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/alert/alert.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 621,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/authentication/authentication.service.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1870,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/menu/menu.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 781,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/userdetails/userdetails.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 663,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "tslint.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1621,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "e2e/src/app.po.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 251,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/app.module.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1982,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/polyfills.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 2841,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/index.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 480,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/AuthGuard.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 908,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/model/user.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 167,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/messages/messages.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 277,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/newmovie/newmovie.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 642,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/profile/profile.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 273,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/alert/alert.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 163,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "tsconfig.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 435,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/app.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1116,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/login/login.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 2096,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/newmovie/newmovie.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 948,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/tslint.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 314,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "e2e/protractor.conf.js",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 752,
+          "mimeType": "text/javascript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/app.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 217,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/authentication/cookie.interceptor.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 491,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/messages/messages.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 642,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/tsconfig.spec.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 256,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/app-routing.module.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1255,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "package-lock.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 373893,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/test.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 642,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/model/message.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 71,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/registration/registration.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1417,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/login/login.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 621,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/movies/movies.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 628,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/userdetails/userdetails.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 569,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/menu/menu.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 614,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/messages/messages.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 27,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/movies/movies.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1026,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/user.service.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 323,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/authentication/authentication.service.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 373,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/home/home.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 261,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/movies/movies.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 921,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/users/users.component.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 621,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/tsconfig.app.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 166,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": ".github/workflows/codeql-analysis.yml",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 2451,
+          "mimeType": "text/x-ini",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/userdetails/userdetails.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 763,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/registration/registration.service.spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 363,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/YA31112/AppData/Local/Fortify/sca21.1/build/leaky-angular/extracted/javascript/C/Source/leaky-angular/src/index.html.js"
+          },
+          "length": 53,
+          "mimeType": "text/javascript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/login/login.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 2035,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/registration/registration.service.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 522,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/menu/menu.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1102,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/user.service.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 468,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/main.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 372,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/users/users.component.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1403,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/app.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 174,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/model/movie.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 146,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/users/users.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 822,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/karma.conf.js",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1026,
+          "mimeType": "text/javascript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/home/home.component.html",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 104,
+          "mimeType": "text/html",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "package.json",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1428,
+          "mimeType": "application/json",
+          "encoding": "windows-31j"
+        },
+        {
+          "location": {
+            "uri": "src/app/alert/alert.service.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 1305,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "e2e/src/app.e2e-spec.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 642,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        },
+        {
+          "location": {
+            "uri": "src/app/movies/movie.service.ts",
+            "uriBaseId": "SRCROOT"
+          },
+          "length": 606,
+          "mimeType": "text/typescript",
+          "encoding": "UTF-8"
+        }
+      ],
+      "automationDetails": {
+        "id": "leaky-angular/"
+      },
+      "columnKind": "utf16CodeUnits",
+      "threadFlowLocations": [
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 61
+              },
+              "region": {
+                "startLine": 12,
+                "snippet": {
+                  "text": "  .catch(err => console.error(err));"
+                }
+              },
+              "contextRegion": {
+                "startLine": 9,
+                "endLine": 12,
+                "snippet": {
+                  "text": "}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
+                }
+              }
+            },
+            "message": {
+              "text": "lambda(0)"
+            }
+          },
+          "kinds": [
+            "call",
+            "function"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 11,
+                "endLine": 13,
+                "snippet": {
+                  "text": "      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 8,
+                "endLine": 16,
+                "snippet": {
+                  "text": "    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "Read HTMLInputElement_Password.prototype"
+            }
+          },
+          "kinds": [
+            "acquire",
+            "resource"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 11,
+                "endLine": 13,
+                "snippet": {
+                  "text": "      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 8,
+                "endLine": 16,
+                "snippet": {
+                  "text": "    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "Assignment to __proto__"
+            }
+          },
+          "kinds": [
+            "acquire",
+            "resource"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 11,
+                "endLine": 13,
+                "snippet": {
+                  "text": "      <input required=\"true\" type=\"password\" class=\"form-control\" \r\n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\r\n      [(ngModel)]=\"user.password\"/>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 8,
+                "endLine": 16,
+                "snippet": {
+                  "text": "    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "Assignment to input_8"
+            }
+          },
+          "kinds": [
+            "acquire",
+            "resource"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 13,
+                "snippet": {
+                  "text": "      [(ngModel)]=\"user.password\"/>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 10,
+                "endLine": 16,
+                "snippet": {
+                  "text": "      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "onchange({input_8}.value : {component}.user.password)"
+            }
+          },
+          "kinds": [
+            "call",
+            "function",
+            "return"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 13,
+                "snippet": {
+                  "text": "      [(ngModel)]=\"user.password\"/>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 10,
+                "endLine": 16,
+                "snippet": {
+                  "text": "      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "Assignment to component.user.password"
+            }
+          },
+          "kinds": [
+            "acquire",
+            "resource"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 33,
+                "snippet": {
+                  "text": "    <button type=\"submit\" class=\"btn btn-primary\" (click)=\"register()\">Register</button>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 30,
+                "endLine": 35,
+                "snippet": {
+                  "text": "      [(ngModel)]=\"user.webPageUrl\"\n      id=\"webPageUrl\" placeholder=\"Enter the address of your webpage\" name=\"webPageUrl\"/>\n    </div>\n    <button type=\"submit\" class=\"btn btn-primary\" (click)=\"register()\">Register</button>\n  </form>\n</div>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "onclick({component}.user)"
+            }
+          },
+          "kinds": [
+            "call",
+            "function"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 33,
+                "snippet": {
+                  "text": "    <button type=\"submit\" class=\"btn btn-primary\" (click)=\"register()\">Register</button>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 30,
+                "endLine": 35,
+                "snippet": {
+                  "text": "      [(ngModel)]=\"user.webPageUrl\"\n      id=\"webPageUrl\" placeholder=\"Enter the address of your webpage\" name=\"webPageUrl\"/>\n    </div>\n    <button type=\"submit\" class=\"btn btn-primary\" (click)=\"register()\">Register</button>\n  </form>\n</div>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "register(this.user)"
+            }
+          },
+          "kinds": [
+            "call",
+            "function"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 13,
+                "snippet": {
+                  "text": "      [(ngModel)]=\"user.password\"/>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 10,
+                "endLine": 16,
+                "snippet": {
+                  "text": "      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "Read password"
+            }
+          },
+          "kinds": [
+            "acquire",
+            "resource"
+          ]
+        },
+        {
+          "location": {
+            "physicalLocation": {
+              "artifactLocation": {
+                "index": 40
+              },
+              "region": {
+                "startLine": 13,
+                "snippet": {
+                  "text": "      [(ngModel)]=\"user.password\"/>"
+                }
+              },
+              "contextRegion": {
+                "startLine": 10,
+                "endLine": 16,
+                "snippet": {
+                  "text": "      <label htmlFor=\"password\">Password:</label>\n      <input required=\"true\" type=\"password\" class=\"form-control\" \n      id=\"pwd\" placeholder=\"Enter password\" name=\"password\"\n      [(ngModel)]=\"user.password\"/>\n    </div>\n    <div class=\"form-group\">\n      <label htmlFor=\"emailAddress\">Mail address:</label>\n"
+                }
+              }
+            },
+            "message": {
+              "text": "Assignment to input_8.value"
+            }
+          },
+          "kinds": [
+            "acquire",
+            "resource"
+          ]
+        }
+      ],
+      "taxonomies": [
+        {
+          "guid": "25F72D7E-8A92-459D-AD67-64853F788765",
+          "name": "CWE",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "taxa": [
+            {
+              "id": "359"
+            },
+            {
+              "id": "525"
+            },
+            {
+              "id": "352"
+            },
+            {
+              "id": "497"
+            },
+            {
+              "id": "311"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
